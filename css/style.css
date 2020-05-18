@@ -1,0 +1,679 @@
+/* Définition de la police */
+@font-face {
+    font-family: 'robotoregular';
+    src: url('fonts/roboto/Roboto-Regular-webfont.eot');
+    src: url('fonts/roboto/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/roboto/Roboto-Regular-webfont.woff') format('woff'),
+         url('fonts/roboto/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('fonts/roboto/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+}
+
+/* Définition de Fontawesome pour les icônes */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('fonts/fontawesome/fontawesome-webfont.eot?v=4.7.0');
+  src: url('fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), 
+       url('fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), 
+       url('fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0') format('woff'), 
+       url('fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), 
+       url('fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+}
+
+                        /* Mise en page générale */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#blocPage {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: robotoregular, serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    margin: 0;
+}
+
+                            /* header */
+header {
+    width: 100%;
+    height: 15.6vh;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+/* Menu de navigation du header */
+#burger {
+    display: none;
+}
+
+header ul {
+    width: 21vw;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: inherit;
+}
+
+header li:hover {
+    height: 15vh;
+    line-height: 15vh;
+    border-top: 4px solid #5cadd3;
+}
+
+                        /* Page d'accueil */
+#sectionAccueil {
+    height: 100vh;
+}
+
+/* slider */
+#slideshow ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+#slideshow {
+    width: 100vw;
+    position: relative;
+}
+
+#content {
+    position: absolute;
+    top: 15.7vh;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 200%;
+    -webkit-transition: left 2s;
+    transition: left 2s;
+    z-index: -1;
+}
+
+#slideshow:target #content {
+    left: -100%;
+}
+
+/* Bordure en bas de l'image */
+.bordure {
+    width: 100vw;
+    height: 0.7vh;
+    position: absolute;
+    bottom: 0.53vh;
+    background-color: rgba(0, 0, 0, 0.3); 
+}
+
+.bordure div {
+    width: 15vw;
+    height: 0.7vh;
+    background-color: #5cadd3
+}
+
+#bord2 {
+    margin-left: 85vw;
+}
+
+/* section de présentation */
+#around {
+    width: 100vw;
+    height: 85vh;
+    margin: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+#sectionAccueil aside {
+    color: white;
+    width: 70vh; 
+    position: absolute;
+    left: 15vw;
+    top: 38.5vh;
+}
+
+/* Titre de la page d'accueil */
+#sectionAccueil h1 {
+    text-transform: uppercase;
+    font-size: 200%;
+}
+
+span {
+    color: #5cadd3;
+}
+
+/* Bouton */
+button, #sectionProjets ul p:hover {
+    text-align: center;
+    background-color: #5cadd3;
+    color: white;
+    border-bottom: 3px solid #4494bb;
+}
+
+button {
+    width: 120px;
+    height: 40px;
+    line-height: 37px;
+    font-size: 1.1em;
+    border: 1px solid #5cadd3;
+    border-bottom: 3px solid #4494bb;
+    border-radius: 3px;
+}
+
+/* Fleches pour changer de photo de fond d'écran d'accueil */
+#flecheGauche, #flecheDroite{
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    background-color: rgba(0, 0, 0, .4);
+    border-radius: 100%;
+    color: white;
+    font-size: 2em;
+    position: absolute;
+    top: 47vh;
+}
+
+#flecheGauche i {
+    margin-left: 45px;
+}
+
+#flecheGauche {
+    right: 97.7vw;
+}
+
+#flecheDroite i {
+    margin-left: 15px;
+}
+
+#flecheDroite {
+    left: 96.5vw;
+}
+
+                    /*  section 2: services */
+
+#sectionServices, #sectionProjets{
+    padding-bottom: 5vh;
+    text-align: center;
+}
+
+/* Titre des pages services et projets */
+#sectionServices h1, #sectionProjets h1 {
+    font-size: 3em;
+    padding-top: 15vh;
+    margin-bottom: 3vh;
+}
+
+/* Cercle de séparation */
+.moncercle i {
+    margin: auto;
+    color: #5cadd3;
+    font-size: 1.2em;
+    border-radius: 50%;
+    border: 6px solid white ;
+}
+
+.moncercle:before, .moncercle:after {
+    content: "";
+    display: inline-block;
+    width: 70px;
+    height: 6px;
+    border-top: 1px solid #9e9e9e;
+}
+
+/* texte de présentation des pages services et projets */
+#sectionServices>:nth-child(3), #sectionProjets>:nth-child(3) {
+    width: 44vw;
+    margin: auto;
+    padding: 2.5vh 0 4vh 0;
+}
+
+/* Contenu de la page services */
+#sectionServices section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+/* Photo mac */
+#sectionServices img {
+    width: 32vw;
+    height: 45vh;
+    margin: auto;
+}
+
+/* Logos  et texte */
+#sectionServices article>article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+#sectionServices article div {
+    width: 75px;
+    height: 75px;
+    line-height: 80px;
+    border: 1px solid #b0b0b0;
+    border-radius: 50%;
+}
+
+#sectionServices article i {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    color: #5cadd3;
+    font-size: 30px;
+    margin: 23px;
+}
+#sectionServices article i[class="fa fa-cubes"] {
+    margin-left: 19px;
+}
+
+i[class="fa fa-pie-chart"] {
+    padding-left: 5px;
+}
+
+#sectionServices article i:after {
+    content: "\f111";
+    font-size: 0.5em;
+    border-radius: 50%;
+    border: 7px solid white;
+    margin-left: 7px;
+}
+
+/* Texte */
+#sectionServices aside {
+    width: 37.5vw;
+    margin-right: 8.2vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 50px;
+    text-align: left;
+}
+
+#sectionServices h2 {
+    font-size: 1.3em;
+}
+
+                /* section 3 : projets/ portfolio */
+
+#sectionProjets {
+    background-color: #f5f5f5;
+}
+
+/* Navigation */
+#sectionProjets li {
+    display: inline-block;
+    margin-bottom: 4vh;
+    position: relative;
+}
+
+#sectionProjets ul p {
+    width: 110px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #c2c2c2;
+}
+
+#sectionProjets li:first-child p {
+    border-radius: 4px 0 0 4px;
+}
+
+#sectionProjets li:last-child p {
+    border-radius: 0 4px 4px 0;
+}
+
+#sectionProjets ul i {
+    font-size: 1.4em;
+    color: #4494bb;
+    position: absolute;
+    bottom: 0.3vh;
+    left: 50px;
+    opacity: 0;
+}
+
+#sectionProjets li:hover p{
+    height: 47px;
+}
+
+#sectionProjets li:hover i{
+    opacity: 1;
+}
+
+
+/* photos */
+#sectionProjets article {
+    width: 90vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+#sectionProjets article img, #sectionProjets article div {
+    width: 300px;
+    height: 200px;
+}
+
+#sectionProjets article a {
+    position : relative;
+    margin: auto;
+    margin-bottom: 40px;
+    color: white;
+}
+
+#sectionProjets article div {
+    position:absolute;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+#sectionProjets article p {
+    height: 80px;
+    padding: 10px 0 0 1.1vw;
+    margin-top: 105px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+#sectionProjets article i {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    position: absolute;
+    top: 80px;
+    left: 225px;
+    border-radius: 50%;
+    background-color: #5cadd3;
+    border: 3px solid;
+}
+
+#sectionProjets article div:hover {
+    opacity: 1;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+}
+
+                /* Footer : contact */
+footer {
+    height: 100vh;
+    background: url(../images/plan.jpg) no-repeat bottom;
+    background-size: cover;
+}
+
+#fondBleu {
+    height: 79vh;
+    width: 100%;
+    background-color: rgba(92, 173, 211, 0.2);
+    padding-top: 21vh;
+}
+
+/*Zone du formulaire*/
+footer aside {
+    background-color: rgba(242, 246, 248, 0.8);
+    margin-left: 65vw;
+    width: 320px;
+    height: 535px;
+    padding: 15px;
+}
+
+footer h2 {
+    font-size: 1em;
+}
+
+/* Formulaire */
+form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.formulaire {
+    margin-top: 20px;
+    border-radius: 3px;
+    width: 310px;
+    height: 28px;
+    border: 1px solid #e5e5e5;
+    text-indent: 5px;
+    font-size: 1em;
+}
+
+#message {
+    height: 140px;
+    color: #9a9a9a;
+    font-family: arial;
+}
+
+footer button {
+    font-size: 1em;
+    margin-top: 25px;
+    width: 150px;
+}
+
+            /* media querries */
+@media all and (max-width: 1600px) {
+    #content img {
+        width: 100vw;
+    }
+    header ul {
+        width: 25vw;
+    }
+}
+
+@media all and (max-width: 1200px) {
+    header ul {
+        width: 30vw;
+    }
+    #sectionAccueil aside {
+        top: 30vh;
+    }
+    #flecheGauche, #flecheDroite {
+        top: 37vh;
+    }
+    #flecheGauche {
+        right: 96.5vw;
+    }
+    #flecheDroite {
+        left: 95vw;
+    }
+    footer aside {
+        margin-left: 55vw;
+        height: 515px;
+    }
+    .formulaire:first-child {
+        margin-top: 0;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    header ul {
+        width: 38vw;
+    }
+    #slideshow, #flecheGauche, #flecheDroite {
+        display: none;    
+    }
+    #sectionAccueil {
+        height: 430px;
+    }
+    #sectionAccueil aside {
+        width: auto;
+        color: black;
+        padding-right: 20px;
+        left: 20px;
+    }
+    #sectionServices img {
+        display: none;
+    }
+    footer, #fondBleu {
+        background: none;
+        height: 104vh;
+    }
+    .formulaire {
+        margin-top: 10px;
+    }
+    footer aside {
+        margin: auto;
+        height: 520px;
+    }
+}
+
+@media all and (max-width: 800px) {
+    header img {
+        width: 30vw;
+    }
+    header ul {
+        width: 50vw;
+    }
+}
+
+@media all and (max-width: 500px) {
+    body {
+        font-size: 1.1em;
+    }
+    
+    /* Menu burger pour le responsive */
+    #burger {
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
+    #burger input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        bottom: 0;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+    }
+    #burger span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background-color: black;
+        border-radius: 3px;
+        z-index: 1;
+    }
+    #burger ul {
+        display: block;
+        position: absolute;
+        width: 130px;
+        height: 304px;
+        background-color: white;
+        opacity: 0;
+    }
+    #burger li {
+        padding: 25px;
+        border: 1px solid #5cadd3;
+    }
+    #burger input:checked ~ ul {
+        opacity: 1;
+    }   
+    
+    #navigation {
+        display: none;
+    }
+    header li:hover {
+        border: 0;
+        height: inherit;
+        line-height: inherit;
+    }
+    header img {
+        width: 60vw;
+    }
+    #sectionServices>:nth-child(3), #sectionProjets>:nth-child(3) {
+        width: 80vw;
+        padding-bottom: 0;
+    }
+    #sectionServices article aside {
+        width: 47vw;
+    }
+    #sectionAccueil aside {
+        top: 120px;
+    }
+    #sectionProjets ul {
+        padding: inherit;
+        padding-bottom: 0;
+    }
+    #sectionProjets li {
+        margin-left: 10px;
+        height: 69px;
+        margin-bottom: 0;
+    }
+    #sectionProjets li:first-child p, #sectionProjets li:last-child p {
+        border-radius: 5px
+    }
+    #sectionProjets li p {
+        border-radius: 5px;
+    }
+    #sectionProjets ul p:hover {
+        color: black;
+        background-color: #c2c2c2;
+        border-bottom: 3px solid #c2c2c2;
+    }
+    #sectionProjets ul i {
+        display: none;
+    }
+    #sectionProjets article div:hover {
+        display: none;
+    }
+    #sectionProjets article img {
+        width: 270px;
+    }
+    footer {
+        height: 130vh;
+    }
+    footer aside {
+        background: white;
+        width: 280px;
+        padding-top: 0;
+    }
+    .formulaire {
+        width: 270px;
+    }
+}
